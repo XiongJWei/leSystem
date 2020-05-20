@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/le-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/le-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/le-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/le-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/le-trade" charset="UTF-8" />
+  </component>
+</project>
