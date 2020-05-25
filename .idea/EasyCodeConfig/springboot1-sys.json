@@ -165,7 +165,7 @@
   } ],
   "pkColumn" : null,
   "otherColumn" : null,
-  "savePackageName" : "cn.sang",
-  "savePath" : "./le-beans/src/main/java/cn/sang",
+  "savePackageName" : "cn.sang.pojo",
+  "savePath" : "./le-beans/src/main/java/cn/sang/pojo",
   "saveModelName" : "lebeans"
 }

@@ -16,7 +16,7 @@
         <module>le-search</module>
         <module>le-trade</module>
         <module>le-utils</module>
-        <module>le-system</module>
+        <module>le-systemManagement</module>
     </modules>
 
     <dependencyManagement>
