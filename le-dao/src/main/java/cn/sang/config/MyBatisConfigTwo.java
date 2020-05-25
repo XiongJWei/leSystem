@@ -21,16 +21,14 @@ public class MyBatisConfigTwo {
     DataSource dsTwo;
 
     @Bean
-    @Primary
-    SqlSessionFactory sqlSessionFactoryBeanOne() throws Exception {
+    SqlSessionFactory sqlSessionFactoryBeanTwo() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dsTwo);
         return factoryBean.getObject();
     }
 
     @Bean
-    @Primary
-    SqlSessionTemplate sqlSessionTemplate() throws Exception {
-        return new SqlSessionTemplate(sqlSessionFactoryBeanOne());
+    SqlSessionTemplate sqlSessionTemplateTwo() throws Exception {
+        return new SqlSessionTemplate(sqlSessionFactoryBeanTwo());
     }
 }

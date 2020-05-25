@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(value = "cn.sang.dao1", sqlSessionFactoryRef = "sqlSessionFactoryBeanOne")
+@MapperScan(value = "cn.sang.dao", sqlSessionFactoryRef = "sqlSessionFactoryBeanOne")
 public class MyBatisConfigOne {
 
     @Autowired
@@ -21,7 +21,6 @@ public class MyBatisConfigOne {
     DataSource dsOne;
 
     @Bean
-    @Primary
     SqlSessionFactory sqlSessionFactoryBeanOne() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dsOne);
@@ -29,8 +28,7 @@ public class MyBatisConfigOne {
     }
 
     @Bean
-    @Primary
-    SqlSessionTemplate sqlSessionTemplate() throws Exception {
+    SqlSessionTemplate sqlSessionTemplateOne() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactoryBeanOne());
     }
 }
