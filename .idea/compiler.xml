@@ -11,12 +11,10 @@
         <module name="lesearch" />
         <module name="letrade" />
         <module name="leauth" />
+        <module name="le-system" />
         <module name="lebeans" />
         <module name="ledao" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ledao" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
