@@ -30,14 +30,13 @@ public class CourseController {
     @Resource
     private CourseAuditService courseAuditService;
 
-
     /**
      * 通过主键查询单条数据
      *
      * @param id 主键
      * @return 单条数据
      */
-    @ApiOperation(value="根据id查询课程",httpMethod = "GET")
+    @ApiOperation(value = "根据id查询课程", httpMethod = "GET")
     //登录映射
     @MyLog(value = "根据id查询课程")
     @GetMapping("selectOne")
@@ -45,46 +44,46 @@ public class CourseController {
         return this.courseService.queryById(id);
     }
 
-    @ApiOperation(value="查询课程列表",httpMethod = "POST")
+    @ApiOperation(value = "查询课程列表", httpMethod = "POST")
     //登录映射
     @MyLog(value = "查询课程列表")
     @PostMapping("listCourse")
     public List<Course> listCourse(@RequestBody CourseVo courseVo) {
-        List<Course> courses=null;
-        Map<String,Object> param=new HashMap<String,Object>();
-        if(courseVo.getCourseName()==null || courseVo.getCourseName().equals("string")){
+        List<Course> courses = null;
+        Map<String, Object> param = new HashMap<String, Object>();
+        if (courseVo.getCourseName() == null || courseVo.getCourseName().equals("string")) {
             courseVo.setCourseName(null);
         }
-        param.put("courseName",courseVo.getCourseName());
-        param.put("isFree",courseVo.getFree());
-        param.put("statusId",courseVo.getStatusId());
-        param.put("isPutaway",courseVo.getPutaway());
-        try{
-            courses=courseService.queryCoursePageByMap(param,courseVo.getPageNo(),courseVo.getPageSize());
-        }catch (Exception e){
+        param.put("courseName", courseVo.getCourseName());
+        param.put("isFree", courseVo.getFree());
+        param.put("statusId", courseVo.getStatusId());
+        param.put("isPutaway", courseVo.getPutaway());
+        try {
+            courses = courseService.queryCoursePageByMap(param, courseVo.getPageNo(), courseVo.getPageSize());
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return courses;
     }
 
-    @ApiOperation(value="查询课程审核列表",httpMethod = "POST")
+    @ApiOperation(value = "查询课程审核列表", httpMethod = "POST")
     //登录映射
     @MyLog(value = "查询课程审核列表")
     @PostMapping("listCourseAudit")
     public List<CourseAudit> listCourseAudit(@RequestBody CourseAuditVo courseAuditVo) {
-        List<CourseAudit> courses=null;
-        Map<String,Object> param=new HashMap<String,Object>();
-        if(courseAuditVo.getCourseName()==null || courseAuditVo.getCourseName().equals("string")){
+        List<CourseAudit> courses = null;
+        Map<String, Object> param = new HashMap<String, Object>();
+        if (courseAuditVo.getCourseName() == null || courseAuditVo.getCourseName().equals("string")) {
             courseAuditVo.setCourseName(null);
         }
-        param.put("auditStatus",courseAuditVo.getAuditStatus());
-        param.put("courseName",courseAuditVo.getCourseName());
-        param.put("isFree",courseAuditVo.getFree());
-        param.put("statusId",courseAuditVo.getStatusId());
-        param.put("isPutaway",courseAuditVo.getPutaway());
-        try{
-            courses=courseAuditService.queryCourseAuditPageByMap(param,courseAuditVo.getPageNo(),courseAuditVo.getPageSize());
-        }catch (Exception e){
+        param.put("auditStatus", courseAuditVo.getAuditStatus());
+        param.put("courseName", courseAuditVo.getCourseName());
+        param.put("isFree", courseAuditVo.getFree());
+        param.put("statusId", courseAuditVo.getStatusId());
+        param.put("isPutaway", courseAuditVo.getPutaway());
+        try {
+            courses = courseAuditService.queryCourseAuditPageByMap(param, courseAuditVo.getPageNo(), courseAuditVo.getPageSize());
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return courses;
