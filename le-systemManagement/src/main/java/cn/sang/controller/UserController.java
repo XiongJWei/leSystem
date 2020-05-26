@@ -21,7 +21,7 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("user")
-@Api(tags = "学员管理")
+@Api(tags = "UserController")
 public class UserController {
     /**
      * 服务对象

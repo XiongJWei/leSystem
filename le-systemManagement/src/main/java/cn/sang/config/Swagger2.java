@@ -19,20 +19,16 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage ("org.sang.system.controller"))
+                .apis(RequestHandlerSelectors.basePackage ("cn.sang.controller"))
                 .paths(PathSelectors. any() )
                 .build();
     }
     public ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-                //页面标题
-                .title("领课教育系统API")
-                //创建人
-                .contact(new Contact("XJW", "http://blog.bianxh.top/", "1481462497@qq.com"))
-                //版本号
+                // 自定义信息可按需求填写
+                .title("测试项目 RESTful APIs")
+                .description("后台测试接口-用户管理模块")
                 .version("1.0")
-                //描述
-                .description("用户管理")
                 .build();
     }
 }

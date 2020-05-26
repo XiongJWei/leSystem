@@ -28,7 +28,7 @@ public class MyBatisConfigOne {
     }
 
     @Bean
-    SqlSessionTemplate sqlSessionTemplateOne() throws Exception {
+    SqlSessionTemplate sqlSessionTemplate() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactoryBeanOne());
     }
 }
