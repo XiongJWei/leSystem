@@ -31,6 +31,25 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.sang</groupId>
+      <artifactId>le-dao</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alipay.sdk</groupId>
+      <artifactId>alipay-sdk-java</artifactId>
+      <version>4.9.153.ALL</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.wxpay</groupId>
+      <artifactId>wxpay-sdk</artifactId>
+      <version>0.0.3</version>
+    </dependency>
   </dependencies>
 
   <build>

@@ -1,10 +1,10 @@
 package cn.sang.controller;
 
+import cn.sang.aop.MyLog;
+import cn.sang.entity.Adv;
+import cn.sang.service.AdvService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.sang.beans.entity.Adv;
-import org.sang.system.aop.MyLog;
-import org.sang.system.service.AdvService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
